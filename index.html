@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William Ache - Portafolio</title>
 
-    <!--
-    - favicon
-  -->
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="./assets/images/logo.ico"
       type="image/x-icon"
     />
 
-    <!--
-    - custom css link
-  -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!--
-    - google font link
-  -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="./assets/libs/bootstrap/icons/dist/bootstrap-icons.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" /> -->
   </head>
 
   <body>
-    <!--
-    - #MAIN
-  -->
-
+    <!-- Main container -->
     <main>
-      <!--
-      - #SIDEBAR
-    -->
-
+      <!-- Sidebar -->
       <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
+          <!-- Avatar -->
           <figure class="avatar-box">
             <img
               src="./assets/images/my-avatar.png"
@@ -51,173 +49,184 @@
             />
           </figure>
 
+          <!-- Personal info -->
           <div class="info-content">
             <h1 class="name" title="William Ache">
               William Ache
-              <img src="./assets/images/ven_2.png" alt="venezuela" width="30" />
+              <img
+                src="./assets/images/venezuela.svg"
+                alt="Venezuela"
+                width="30"
+              />
             </h1>
-
             <p class="title">Desarrollador Web</p>
           </div>
 
+          <!-- Sidebar toggle button -->
           <button class="info_more-btn" data-sidebar-btn>
             <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
+            <i class="bi bi-chevron-down"></i>
           </button>
         </div>
 
+        <!-- More contact info -->
         <div class="sidebar-info_more">
           <div class="separator"></div>
 
           <ul class="contacts-list">
+            <!-- Email -->
             <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Correo Electrónico</p>
-
-                <a href="mailto:william28ache@gmail.com" class="contact-link"
-                  >william28ache@gmail.com</a
-                >
-              </div>
+              <a
+                href="mailto:william28ache@gmail.com"
+                class="contact-link flex-align"
+              >
+                <div class="icon-box"><i class="bi bi-envelope"></i></div>
+                <div class="contact-info">
+                  <p class="contact-title">Correo Electrónico</p>
+                  <span> <small>william28ache@gmail.com</small></span>
+                </div>
+              </a>
             </li>
 
+            <!-- Phone -->
             <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Telefono (WhatsApp)</p>
-
-                <a href="tel:+584121305420" class="contact-link"
-                  >+58 (412) 130-5420</a
-                >
-              </div>
+              <a href="tel:+584121305420" class="contact-link flex-align">
+                <div class="icon-box"><i class="bi bi-whatsapp"></i></div>
+                <div class="contact-info">
+                  <p class="contact-title">Teléfono</p>
+                  <span>+58 (412) 130-5420</span>
+                </div>
+              </a>
             </li>
 
+            <!-- LinkedIn -->
             <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Linkedin</p>
-                <a
-                  href="https://www.linkedin.com/in/william-ache/"
-                  class="contact-link"
-                  target="_blank"
-                  >william-ache</a
-                >
-              </div>
+              <a
+                href="https://www.linkedin.com/in/william-ache/"
+                target="_blank"
+                class="contact-link flex-align"
+              >
+                <div class="icon-box"><i class="bi bi-linkedin"></i></div>
+                <div class="contact-info">
+                  <p class="contact-title">LinkedIn</p>
+                  <span>william-ache</span>
+                </div>
+              </a>
             </li>
 
+            <!-- Location -->
             <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Ubicación</p>
-
-                <address>
-                  <a
-                    href="https://maps.app.goo.gl/fEsRNkLa99RXKyen7"
-                    class="contact-link"
-                    target="_blank"
-                    >Aragua, Venezuela</a
-                  >
-                </address>
-              </div>
+              <a
+                href="https://maps.app.goo.gl/fEsRNkLa99RXKyen7"
+                target="_blank"
+                class="contact-link flex-align"
+              >
+                <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+                <div class="contact-info">
+                  <p class="contact-title">Ubicación</p>
+                  <span>Aragua, Venezuela</span>
+                </div>
+              </a>
             </li>
           </ul>
+
+          <!-- <div class="separator"></div> -->
         </div>
       </aside>
 
-      <!--
-      - #main-content
-    -->
-
+      <!-- Main content -->
       <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
+        <!-- Navbar -->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Trabajos</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Habilidades</button>
-            </li>
-
-            <li class="navbar-item">
-              <a href="javascript:void(0)" class="navbar-link" download=""
-                >Descargar CV</a
+              <button
+                class="navbar-link active"
+                data-nav-link
+                data-translate="Resumen"
               >
+                Resumen
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                data-nav-link
+                data-translate="Trabajos"
+              >
+                Trabajos
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                data-nav-link
+                data-translate="Habilidades"
+              >
+                Habilidades
+              </button>
+            </li>
+            <li class="navbar-item">
+              <a
+                href="./assets/docs/Curriculum Vitae CV - William Ache - Full Stack Laravel - Español.pdf"
+                target="_blank"
+                class="navbar-link cv-link"
+                data-translate="Curriculum Vitae (CV)"
+              >
+                Curriculum Vitae (CV)
+              </a>
+            </li>
+
+            <!-- Selector de idioma -->
+            <li class="navbar-item language-selector">
+              <!-- Aquí el JS se encarga de mostrar solo la bandera opuesta -->
             </li>
           </ul>
         </nav>
 
-        <article class="resume active" data-page="resume">
+        <!-- Resumen Section -->
+        <article class="resumen active" data-page="resumen">
           <header>
-            <h2 class="h2 article-title">Resume</h2>
+            <h2 class="h2 article-title">Resumen</h2>
           </header>
 
-          <p class="timeline timeline-text">
-            Más de 7 años de experiencia desarrollando aplicaciones web,
-            especializado en Laravel, MySQL, jQuery, Bootstrap, y en una amplia
-            gama de bibliotecas y herramientas que optimizan tanto el desarrollo
-            como la experiencia del usuario.
+          <!-- Summary -->
+          <p class="timeline timeline-text" style="text-align: justify">
+            Desarrollador Full‑Stack con más de 7 años de experiencia en
+            creación de aplicaciones web robustas y escalables. Especializado en
+            Laravel, MySQL, jQuery, Bootstrap, y en una amplia gama de
+            bibliotecas y herramientas que optimizan tanto el desarrollo como la
+            experiencia del usuario. Enfocado en código limpio, modular y con
+            atención a la calidad y rendimiento.
           </p>
 
+          <!-- Experience -->
           <section class="timeline">
             <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">experiencia</h3>
+              <div class="icon-box"><i class="bi bi-book"></i></div>
+              <h3 class="h3">Experiencia</h3>
             </div>
-
             <ol class="timeline-list">
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">
                   Software Factory | IT OESTE (Remoto por contrato)
                 </h4>
-
-                <span>Febrero 2022 - actualidad (+3 años)</span>
+                <span>Febrero 2022 - Actualidad (+3 años)</span>
                 <span>Desarrollador Web Full Stack</span>
-
                 <p class="timeline-text">asdasd</p>
               </li>
-
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Art director</h4>
-
                 <span>2013 — 2015</span>
-
                 <p class="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
                   delenit atque corrupti, quos dolores et quas molestias
                   exceptur.
                 </p>
               </li>
-
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Web designer</h4>
-
                 <span>2010 — 2013</span>
-
                 <p class="timeline-text">
                   Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
                   delenit atque corrupti, quos dolores et quas molestias
@@ -227,65 +236,55 @@
             </ol>
           </section>
 
+          <!-- Education -->
           <section class="timeline">
             <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
+              <div class="icon-box"><i class="bi bi-book"></i></div>
               <h3 class="h3">Educación</h3>
             </div>
-
             <ol class="timeline-list">
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">
                   UNIVERSIDAD NACIONAL ABIERTA (UNA)
                 </h4>
-
                 <span>Enero 2018 — Pausado</span>
-
                 <p class="timeline-text">Ingeniería de Sistemas (+3 años).</p>
               </li>
             </ol>
           </section>
         </article>
 
-        <!--
-        - #PORTFOLIO
-      -->
-
+        <!-- Portfolio Section -->
         <article class="portfolio" data-page="trabajos">
           <header>
             <h2 class="h2 article-title">Portfolio</h2>
           </header>
 
           <section class="projects">
+            <!-- Filters -->
             <ul class="filter-list">
               <li class="filter-item">
                 <button class="active" data-filter-btn>All</button>
               </li>
-
               <li class="filter-item">
                 <button data-filter-btn>Web design</button>
               </li>
-
               <li class="filter-item">
                 <button data-filter-btn>Applications</button>
               </li>
-
               <li class="filter-item">
                 <button data-filter-btn>Web development</button>
               </li>
             </ul>
 
+            <!-- Select dropdown for filters -->
             <div class="filter-select-box">
               <button class="filter-select" data-select>
                 <div class="select-value" data-selecct-value>
                   Select category
                 </div>
-
                 <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
+                  <i class="bi bi-chevron-down"></i>
                 </div>
               </button>
 
@@ -293,22 +292,21 @@
                 <li class="select-item">
                   <button data-select-item>All</button>
                 </li>
-
                 <li class="select-item">
                   <button data-select-item>Web design</button>
                 </li>
-
                 <li class="select-item">
                   <button data-select-item>Applications</button>
                 </li>
-
                 <li class="select-item">
                   <button data-select-item>Web development</button>
                 </li>
               </ul>
             </div>
 
+            <!-- Project list -->
             <ul class="project-list">
+              <!-- Example Project Item -->
               <li
                 class="project-item active"
                 data-filter-item
@@ -317,508 +315,39 @@
                 <a href="#">
                   <figure class="project-img">
                     <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
+                      <i class="bi bi-eye"></i>
                     </div>
-
                     <img
                       src="./assets/images/project-1.jpg"
                       alt="finance"
                       loading="lazy"
                     />
                   </figure>
-
                   <h3 class="project-title">Finance</h3>
-
                   <p class="project-category">Web development</p>
                 </a>
               </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-2.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Orizon</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-3.jpg"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Fundo</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-4.png"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Brawlhalla</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-5.png"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">DSM.</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-6.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">MetaSpark</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-7.png"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Summary</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-8.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-9.png"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Arrival</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
+              <!-- Repetir proyecto según sea necesario -->
             </ul>
           </section>
         </article>
 
-        <!--
-        - #SKILL
-      -->
-
+        <!-- Skills Section -->
         <article class="skill" data-page="habilidades">
           <header>
-            <h2 class="h2 article-title">Portfolio</h2>
+            <h2 class="h2 article-title">Skills</h2>
           </header>
-
           <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Web design</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-              </li>
-            </ul>
-
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web design</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Web development</button>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-1.jpg"
-                      alt="finance"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Finance</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-2.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Orizon</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-3.jpg"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Fundo</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-4.png"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Brawlhalla</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-5.png"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">DSM.</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web design"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-6.png"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">MetaSpark</h3>
-
-                  <p class="project-category">Web design</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-7.png"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Summary</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="applications"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-8.jpg"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Task Manager</h3>
-
-                  <p class="project-category">Applications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/project-9.png"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Arrival</h3>
-
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-            </ul>
+            <!-- Igual estructura que portfolio -->
+            <!-- Puedes reutilizar los filtros y project-list -->
           </section>
         </article>
       </div>
     </main>
 
-    <!--
-    - custom js link
-  -->
+    <!-- Scripts -->
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/lang.js"></script>
     <script src="./assets/js/script.js"></script>
-
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
   </body>
 </html>
