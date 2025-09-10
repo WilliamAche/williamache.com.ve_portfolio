@@ -6,10 +6,11 @@ let currentLang = "es"; // Por defecto español
 // Diccionario de traducción
 const translations = {
   es: {
+    "Haz click en mi": "Haz click en mi",
     Resumen: "Resumen",
-    Trabajos: "Trabajos",
+    Portafolio: "Portafolio",
     Habilidades: "Habilidades",
-    "Curriculum Vitae (CV)": "Curriculum Vitae (CV)",
+    "Curriculum Vitae (ES)": "Curriculum Vitae (ES)",
     "Correo Electrónico": "Correo Electrónico",
     Teléfono: "Teléfono",
     Ubicación: "Ubicación",
@@ -18,10 +19,11 @@ const translations = {
       "./assets/docs/Curriculum Vitae CV - William Ache - Full Stack Laravel - Español.pdf",
   },
   en: {
+    "Haz click en mi": "Click me",
     Resumen: "Summary",
-    Trabajos: "Work",
+    Portafolio: "Portfolio",
     Habilidades: "Skills",
-    "Curriculum Vitae (CV)": "Curriculum Vitae (CV)",
+    "Curriculum Vitae (ES)": "Curriculum Vitae (EN)",
     "Correo Electrónico": "Email",
     Teléfono: "Phone",
     Ubicación: "Location",

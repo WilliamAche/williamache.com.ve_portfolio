@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William Ache - Portafolio</title>
 
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -19,335 +16,486 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
     <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="./assets/libs/bootstrap/icons/dist/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="./assets/libs/bootstrap/icons/dist/bootstrap-icons.min.css" />
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" /> -->
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Main container -->
     <main>
-      <!-- Sidebar -->
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <!-- Avatar -->
-          <figure class="avatar-box">
-            <img
-              src="./assets/images/my-avatar.png"
-              alt="William Ache"
-              width="80"
-            />
-          </figure>
-
-          <!-- Personal info -->
-          <div class="info-content">
-            <h1 class="name" title="William Ache">
-              William Ache
-              <img
-                src="./assets/images/venezuela.svg"
-                alt="Venezuela"
-                width="30"
-              />
-            </h1>
-            <p class="title">Desarrollador Web</p>
-          </div>
-
-          <!-- Sidebar toggle button -->
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-            <i class="bi bi-chevron-down"></i>
-          </button>
-        </div>
-
-        <!-- More contact info -->
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <!-- Email -->
-            <li class="contact-item">
-              <a
-                href="mailto:william28ache@gmail.com"
-                class="contact-link flex-align"
-              >
-                <div class="icon-box"><i class="bi bi-envelope"></i></div>
-                <div class="contact-info">
-                  <p class="contact-title">Correo Electrónico</p>
-                  <span> <small>william28ache@gmail.com</small></span>
-                </div>
-              </a>
-            </li>
-
-            <!-- Phone -->
-            <li class="contact-item">
-              <a href="tel:+584121305420" class="contact-link flex-align">
-                <div class="icon-box"><i class="bi bi-whatsapp"></i></div>
-                <div class="contact-info">
-                  <p class="contact-title">Teléfono</p>
-                  <span>+58 (412) 130-5420</span>
-                </div>
-              </a>
-            </li>
-
-            <!-- LinkedIn -->
-            <li class="contact-item">
-              <a
-                href="https://www.linkedin.com/in/william-ache/"
-                target="_blank"
-                class="contact-link flex-align"
-              >
-                <div class="icon-box"><i class="bi bi-linkedin"></i></div>
-                <div class="contact-info">
-                  <p class="contact-title">LinkedIn</p>
-                  <span>william-ache</span>
-                </div>
-              </a>
-            </li>
-
-            <!-- Location -->
-            <li class="contact-item">
-              <a
-                href="https://maps.app.goo.gl/fEsRNkLa99RXKyen7"
-                target="_blank"
-                class="contact-link flex-align"
-              >
-                <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
-                <div class="contact-info">
-                  <p class="contact-title">Ubicación</p>
-                  <span>Aragua, Venezuela</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <!-- <div class="separator"></div> -->
-        </div>
-      </aside>
-
-      <!-- Main content -->
-      <div class="main-content">
-        <!-- Navbar -->
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button
-                class="navbar-link active"
-                data-nav-link
-                data-translate="Resumen"
-              >
-                Resumen
-              </button>
-            </li>
-            <li class="navbar-item">
-              <button
-                class="navbar-link"
-                data-nav-link
-                data-translate="Trabajos"
-              >
-                Trabajos
-              </button>
-            </li>
-            <li class="navbar-item">
-              <button
-                class="navbar-link"
-                data-nav-link
-                data-translate="Habilidades"
-              >
-                Habilidades
-              </button>
-            </li>
-            <li class="navbar-item">
-              <a
-                href="./assets/docs/Curriculum Vitae CV - William Ache - Full Stack Laravel - Español.pdf"
-                target="_blank"
-                class="navbar-link cv-link"
-                data-translate="Curriculum Vitae (CV)"
-              >
-                Curriculum Vitae (CV)
-              </a>
-            </li>
-
-            <!-- Selector de idioma -->
-            <li class="navbar-item language-selector">
-              <!-- Aquí el JS se encarga de mostrar solo la bandera opuesta -->
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Resumen Section -->
-        <article class="resumen active" data-page="resumen">
-          <header>
-            <h2 class="h2 article-title">Resumen</h2>
-          </header>
-
-          <!-- Summary -->
-          <p class="timeline timeline-text" style="text-align: justify">
-            Desarrollador Full‑Stack con más de 7 años de experiencia en
-            creación de aplicaciones web robustas y escalables. Especializado en
-            Laravel, MySQL, jQuery, Bootstrap, y en una amplia gama de
-            bibliotecas y herramientas que optimizan tanto el desarrollo como la
-            experiencia del usuario. Enfocado en código limpio, modular y con
-            atención a la calidad y rendimiento.
-          </p>
-
-          <!-- Experience -->
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box"><i class="bi bi-book"></i></div>
-              <h3 class="h3">Experiencia</h3>
-            </div>
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Software Factory | IT OESTE (Remoto por contrato)
-                </h4>
-                <span>Febrero 2022 - Actualidad (+3 años)</span>
-                <span>Desarrollador Web Full Stack</span>
-                <p class="timeline-text">asdasd</p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Art director</h4>
-                <span>2013 — 2015</span>
-                <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Web designer</h4>
-                <span>2010 — 2013</span>
-                <p class="timeline-text">
-                  Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                  delenit atque corrupti, quos dolores et quas molestias
-                  exceptur.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <!-- Education -->
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box"><i class="bi bi-book"></i></div>
-              <h3 class="h3">Educación</h3>
-            </div>
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  UNIVERSIDAD NACIONAL ABIERTA (UNA)
-                </h4>
-                <span>Enero 2018 — Pausado</span>
-                <p class="timeline-text">Ingeniería de Sistemas (+3 años).</p>
-              </li>
-            </ol>
-          </section>
-        </article>
-
-        <!-- Portfolio Section -->
-        <article class="portfolio" data-page="trabajos">
-          <header>
-            <h2 class="h2 article-title">Portfolio</h2>
-          </header>
-
-          <section class="projects">
-            <!-- Filters -->
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>Web design</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>Applications</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>Web development</button>
-              </li>
-            </ul>
-
-            <!-- Select dropdown for filters -->
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-                <div class="select-icon">
-                  <i class="bi bi-chevron-down"></i>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Web design</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Applications</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Web development</button>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Project list -->
-            <ul class="project-list">
-              <!-- Example Project Item -->
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="web development"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <i class="bi bi-eye"></i>
+        <!-- Sidebar -->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <!-- Avatar -->
+                <!-- HTML -->
+                <figure class="avatar-box" style="position: relative; display: inline-block">
+                    <img id="avatar" style="cursor: pointer" src="./assets/images/my-avatar.png" alt="William Ache"
+                        width="80" />
+                    <!-- Speech bubble encima de la imagen -->
+                    <div id="avatar-bubble" class="speech-bubble" role="button" tabindex="0"
+                        aria-label="Haz click en la imagen - Click me">
+                        <span data-translate="Haz click en mi">Haz click en mi</span>
+                        <i class="bubble-arrow" aria-hidden="true"></i>
                     </div>
-                    <img
-                      src="./assets/images/project-1.jpg"
-                      alt="finance"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <h3 class="project-title">Finance</h3>
-                  <p class="project-category">Web development</p>
-                </a>
-              </li>
-              <!-- Repetir proyecto según sea necesario -->
-            </ul>
-          </section>
-        </article>
+                </figure>
 
-        <!-- Skills Section -->
-        <article class="skill" data-page="habilidades">
-          <header>
-            <h2 class="h2 article-title">Skills</h2>
-          </header>
-          <section class="projects">
-            <!-- Igual estructura que portfolio -->
-            <!-- Puedes reutilizar los filtros y project-list -->
-          </section>
-        </article>
-      </div>
+                <!-- Personal info -->
+                <div class="info-content">
+                    <h1 class="name" title="William Ache">
+                        William Ache
+                        <img src="./assets/images/venezuela.svg" alt="Venezuela" width="30" />
+                    </h1>
+                    <p class="title">Desarrollador Web</p>
+                </div>
+
+                <!-- Sidebar toggle button -->
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </div>
+
+            <!-- More contact info -->
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+                    <!-- Email -->
+                    <li class="contact-item">
+                        <a href="mailto:william28ache@gmail.com" class="contact-link flex-align">
+                            <div class="icon-box"><i class="bi bi-envelope"></i></div>
+                            <div class="contact-info">
+                                <p class="contact-title">Correo Electrónico</p>
+                                <span> <small>william28ache@gmail.com</small></span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Phone -->
+                    <li class="contact-item">
+                        <a href="tel:+584121305420" class="contact-link flex-align">
+                            <div class="icon-box"><i class="bi bi-whatsapp"></i></div>
+                            <div class="contact-info">
+                                <p class="contact-title">Teléfono</p>
+                                <span>+58 (412) 130-5420</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- LinkedIn -->
+                    <li class="contact-item">
+                        <a href="https://www.linkedin.com/in/william-ache/" target="_blank"
+                            class="contact-link flex-align">
+                            <div class="icon-box"><i class="bi bi-linkedin"></i></div>
+                            <div class="contact-info">
+                                <p class="contact-title">LinkedIn</p>
+                                <span>william-ache</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Location -->
+                    <li class="contact-item">
+                        <a href="https://maps.app.goo.gl/fEsRNkLa99RXKyen7" target="_blank"
+                            class="contact-link flex-align">
+                            <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+                            <div class="contact-info">
+                                <p class="contact-title">Ubicación</p>
+                                <span>Aragua, Venezuela</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- <div class="separator"></div> -->
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <button class="navbar-link active" data-nav-link data-translate="Resumen">
+                            Resumen
+                        </button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link data-translate="Portafolio">
+                            Portafolio
+                        </button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link data-translate="Habilidades">
+                            Habilidades
+                        </button>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./assets/docs/Curriculum Vitae CV - William Ache - Full Stack Laravel - Español.pdf"
+                            target="_blank" class="navbar-link cv-link" data-translate="Curriculum Vitae (ES)">
+                            Curriculum Vitae (ES)
+                        </a>
+                    </li>
+
+                    <!-- Selector de idioma -->
+                    <li class="navbar-item language-selector">
+                        <!-- Aquí el JS se encarga de mostrar solo la bandera opuesta -->
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Resumen Section -->
+            <article class="resumen active" data-page="resumen">
+                <header>
+                    <h2 class="h2 article-title">Resumen</h2>
+                </header>
+
+                <!-- Summary -->
+                <p class="timeline-text-p">
+                    Desarrollador Full‑Stack con más de 7 años de experiencia en
+                    creación de aplicaciones web robustas y escalables. Especializado en
+                    Laravel, MySQL, jQuery, Bootstrap, y en una amplia gama de
+                    bibliotecas y herramientas que optimizan tanto el desarrollo como la
+                    experiencia del usuario. Enfocado en código limpio, modular y con
+                    atención a la calidad y rendimiento.
+                </p>
+
+                <!-- Experience -->
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><i class="bi bi-book"></i></div>
+                        <h3 class="h3">Experiencia</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Software Factory | IT OESTE (Remoto por contrato)
+                                    </h4>
+                                    <span class="timeline-role">Desarrollador Web Full Stack (+3 años)</span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Argentina, Buenos Aires</span>
+                                    <span class="timeline-date">Febrero 2022 - Actualidad</span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Creación de páginas web: </b>Diseño y desarrollo de sitios
+                                corporativos y promocionales, combinando una arquitectura de
+                                información clara con interfaces visualmente atractivas, con
+                                código limpio, modular.
+                            </p>
+                            <p class="timeline-text">
+                                <b class="">Sistemas administrativos y de control de inventario:</b>
+                                Desarrollo de paneles de control integrados que centralizan
+                                datos, incorporando módulos de seguimiento de stock en tiempo
+                                real con alertas automáticas de reposición y reportes
+                                personalizados.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Aplicaciones móviles iOS y Android (WebView): </b>
+                                Integración de sitios webs como WebView dentro de apps
+                                nativas/híbridas.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Valdusoft Desarrollo web (Remoto por contrato)
+                                    </h4>
+                                    <span class="timeline-role">Desarrollador Web Full Stack (1 año y 2 meses)</span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Venezuela, Tachira </span>
+                                    <span class="timeline-date">Diciembre 2020 - Enero 2022</span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Creación de páginas web y sistemas administrativos y de
+                                    control de inventario.
+                                </b>
+                            </p>
+                            <p class="timeline-text">
+                                <b>Páginas multinivel:</b> Implementación de webs para venta
+                                directa con sistemas de afiliación, paneles de socios y
+                                seguimiento de comisiones y billeteras.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Tiendas online: </b>
+                                Desarrollo integral de e-commerce (catálogo, carrito,
+                                pasarelas de pago y gestión de envíos) con enfoque en la
+                                optimización de conversiones.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Líder de equipo y testing (Project Manager): </b>
+                                Coordinación bajo metodologías ágiles (Scrum/Kanban),
+                                planificación de sprints y asignación de tareas, revisión de
+                                código, mentoría técnica y ejecución de pruebas unitarias e de
+                                integración para asegurar la calidad y la entrega continua de
+                                los objetivos.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Director Front‑End & Back-End: </b>
+                                Líder técnico integral de la capa visual y del servidor;
+                                definición y selección de frameworks, bases de datos y APIs;
+                                establecimiento de normas de calidad y buenas prácticas; y
+                                garantía de que el diseño UI/UX esté perfectamente alineado
+                                con la lógica y arquitectura del back-end.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Swamer Store (Remoto temporal)
+                                    </h4>
+                                    <span class="timeline-role">Desarrollador Web Full Stack (1 año)
+                                    </span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Venezuela, Caracas </span>
+                                    <span class="timeline-date">Enero 2020 - Diciembre 2020
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Sistemas administrativos y de control de inventario. </b>
+                            </p>
+                            <p class="timeline-text">
+                                <b>Administración de bases de datos:</b> Modelado,
+                                implementación y mantenimiento de bases relacionales y NoSQL;
+                                optimización de consultas y respaldos periódicos para asegurar
+                                disponibilidad y rendimiento
+                            </p>
+                            <p class="timeline-text">
+                                <b>Optimización de procesos: </b>
+                                Análisis y automatización de flujos internos (scripts,
+                                CI/CD,APIs).
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Maprotel C.A (Presencial becario)
+                                    </h4>
+                                    <span class="timeline-role">Becario de desarrollo (2 año y 1 mes)
+                                    </span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Venezuela, Caracas </span>
+                                    <span class="timeline-date">Enero 2018 - Enero 2020 </span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Creación de páginas web. </b>
+                            </p>
+                            <p class="timeline-text">
+                                <b>Desarrollo web y call center:</b> Modelado, Creación y
+                                mantenimiento de sitios corporativos y plataformas de atención
+                                telefónica con foco en enrutamiento de llamadas, integrando
+                                formularios, bases de datos de clientes y APIs de VoIP.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Mantenimiento electrónico: </b>
+                                Realicé mantenimiento y reparación preventiva de PCs,
+                                impresoras y equipos de red.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Education -->
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box"><i class="bi bi-book"></i></div>
+                        <h3 class="h3">Educación</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Universidad (U.N.A) Universidad Nacional Abierta
+                                    </h4>
+                                    <span class="timeline-role">Ingeniería de Sistemas (+3 años)
+                                    </span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Venezuela, Caracas </span>
+                                    <span class="timeline-date">Enero 2018 - Enero 2020 </span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Proyectos y prácticas: </b>Desarrollo de aplicaciones web y
+                                sistemas administrativos como parte de las prácticas
+                                universitarias, aplicando metodologías ágiles y buenas
+                                prácticas de programación. Implementación de bases de datos
+                                relacionales, integración con APIs y optimización de procesos.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Habilidades adquiridas: </b>Programación en PHP y
+                                JavaScript, diseño de interfaces, gestión de proyectos,
+                                control de versiones con Git y uso de frameworks modernos como
+                                Laravel. Experiencia en trabajo colaborativo y resolución de
+                                problemas complejos.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="title-row">
+                                <div class="left-column">
+                                    <h4 class="h4 timeline-item-title">
+                                        Secundaria (U.E.N) Carlos Manuel Arrieta
+                                    </h4>
+                                    <span class="timeline-role">bachillerato (6 años) </span>
+                                </div>
+
+                                <div class="right-column">
+                                    <span class="timeline-location">Venezuela, Aragua </span>
+                                    <span class="timeline-date">Enero 2012 - Enero 2018 </span>
+                                </div>
+                            </div>
+
+                            <p class="timeline-text">
+                                <b>Cursos destacados: </b>Primeros auxilios, Psicología,
+                                Matemáticas, Computación, Autoconocimiento y Desarrollo
+                                Humano.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Proyectos y liderazgo: </b>Formé parte del equipo de
+                                representantes de los distintos salones, trabajando junto a
+                                mis compañeros para organizar actividades escolares y eventos
+                                con la dirección y los docentes, fomentando la colaboración y
+                                la participación de todos los estudiantes.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Logros académicos: </b>Me mantuve entre los primeros 5
+                                estudiantes de mi salón y dentro de los 20 mejores de toda la
+                                secundaria, destacando por constancia, liderazgo y desempeño
+                                académico.
+                            </p>
+                            <p class="timeline-text">
+                                <b>Habilidades adquiridas: </b>Trabajo en equipo, comunicación
+                                efectiva, liderazgo compartido, planificación y organización
+                                de actividades escolares, y manejo básico de herramientas
+                                informáticas.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+
+            <!-- Portfolio Section -->
+            <article class="portfolio" data-page="portafolio">
+                <header>
+                    <h2 class="h2 article-title">Portafolio</h2>
+                </header>
+
+                <section class="projects">
+                    <!-- Filters -->
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>Todos</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Sitios / Aplicaciones Web</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Tiendas en Línea / E-commerce</button>
+                        </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>
+                                Proyectos Personales / Experimentales
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Select dropdown for filters -->
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-selecct-value>
+                                Select category
+                            </div>
+                            <div class="select-icon">
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item">
+                                <button data-select-item>All</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Web design</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Applications</button>
+                            </li>
+                            <li class="select-item">
+                                <button data-select-item>Web development</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Project list -->
+                    <ul class="project-list">
+                        <!-- Example Project Item -->
+                        <li class="project-item active" data-filter-item data-category="web development">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <i class="bi bi-eye"></i>
+                                    </div>
+                                    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy" />
+                                </figure>
+                                <h3 class="project-title">Finance</h3>
+                                <p class="project-category">Web development</p>
+                            </a>
+                        </li>
+                        <!-- Repetir proyecto según sea necesario -->
+                    </ul>
+                </section>
+            </article>
+
+            <!-- Skills Section -->
+            <article class="skill" data-page="habilidades">
+                <header>
+                    <h2 class="h2 article-title">Skills</h2>
+                </header>
+                <section class="projects">
+                    <!-- Igual estructura que portfolio -->
+                    <!-- Puedes reutilizar los filtros y project-list -->
+                </section>
+            </article>
+        </div>
     </main>
 
     <!-- Scripts -->
     <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="./assets/js/lang.js"></script>
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>

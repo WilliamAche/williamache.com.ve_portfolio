@@ -1,122 +1,141 @@
-'use strict';
+$(function () {
+  /** =====================
+   *  Cambio de imágenes al hacer click
+   ====================== */
+  const imagenes = [
+    "./assets/images/my-avatar.png",
+    "./assets/images/avatar2.png",
+    "./assets/images/avatar3.png",
+    "./assets/images/avatar4.png",
+  ];
+  let index = 0;
 
-
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+  $("#avatar").on("click", function () {
+    index = (index + 1) % imagenes.length;
+    $(this).attr("src", imagenes[index]);
   });
-}
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+  /** =====================
+   *  Función para alternar clase .active
+   ====================== */
+  const elementToggleFunc = (elem) => elem.toggleClass("active");
 
-const filterFunc = function (selectedValue) {
+  /** =====================
+   *  Sidebar (versión móvil)
+   ====================== */
+  const $sidebar = $("[data-sidebar]");
+  const $sidebarBtn = $("[data-sidebar-btn]");
 
-  for (let i = 0; i < filterItems.length; i++) {
+  $sidebarBtn.on("click", function () {
+    elementToggleFunc($sidebar);
+  });
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
+  /** =====================
+   *  Select personalizado + Filtros
+   ====================== */
+  const $select = $("[data-select]");
+  const $selectItems = $("[data-select-item]");
+  const $selectValue = $("[data-selecct-value]"); // ojo: revisa el HTML, parece haber un typo en "selecct"
+  const $filterBtn = $("[data-filter-btn]");
+  const $filterItems = $("[data-filter-item]");
 
+  $select.on("click", function () {
+    elementToggleFunc($(this));
+  });
+
+  // Evento en cada item del select
+  $selectItems.on("click", function () {
+    let selectedValue = $(this).text().toLowerCase();
+    $selectValue.text($(this).text());
+    elementToggleFunc($select);
+    filterFunc(selectedValue);
+  });
+
+  // Función de filtrado
+  function filterFunc(selectedValue) {
+    $filterItems.each(function () {
+      let $item = $(this);
+      if (selectedValue === "all" || selectedValue === $item.data("category")) {
+        $item.addClass("active");
+      } else {
+        $item.removeClass("active");
+      }
+    });
   }
 
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
+  // Filtros para pantallas grandes
+  let $lastClickedBtn = $filterBtn.first();
+  $filterBtn.on("click", function () {
+    let selectedValue = $(this).text().toLowerCase();
+    $selectValue.text($(this).text());
     filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+    $lastClickedBtn.removeClass("active");
+    $(this).addClass("active");
+    $lastClickedBtn = $(this);
   });
 
-}
+  /** =====================
+   *  Validación formulario de contacto
+   ====================== */
+  const $form = $("[data-form]");
+  const $formInputs = $("[data-form-input]");
+  const $formBtn = $("[data-form-btn]");
 
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+  $formInputs.on("input", function () {
+    if ($form[0].checkValidity()) {
+      $formBtn.removeAttr("disabled");
     } else {
-      formBtn.setAttribute("disabled", "");
+      $formBtn.attr("disabled", true);
     }
-
   });
-}
 
+  /** =====================
+   *  Navegación de páginas
+   ====================== */
+  const $navigationLinks = $("[data-nav-link]");
+  const $pages = $("[data-page]");
 
+  $navigationLinks.on("click", function () {
+    let pageName = $(this).text().toLowerCase();
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    $pages.each(function (i) {
+      let $page = $(this);
+      if (pageName === $page.data("page")) {
+        $page.addClass("active");
+        $navigationLinks.eq(i).addClass("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        $page.removeClass("active");
+        $navigationLinks.eq(i).removeClass("active");
       }
-    }
-
+    });
   });
-}
+});
 
+$(function () {
+  const $avatar = $("#avatar");
+  const $bubble = $("#avatar-bubble");
+
+  // Mostrar la burbuja inicialmente (si quieres que empiece oculta, quita esta línea)
+  $bubble.addClass("show");
+
+  // Hacer que el click en la burbuja dispare el click del avatar
+  $bubble.on("click", function (e) {
+    e.preventDefault();
+    // dispara el click real sobre la imagen para reutilizar la lógica existente
+    $avatar.trigger("click");
+    // opcional: ocultar la burbuja tras el primer click para no molestar
+    // $bubble.fadeOut(200, function () {
+    //   $bubble.remove();
+    // });
+  });
+
+  // Opcional: ocultar la burbuja después de X segundos si no hacen nada (ej. 5s)
+  setTimeout(function () {
+    if ($bubble.length)
+      $bubble.fadeOut(2828, function () {
+        $bubble.remove();
+      });
+  }, 5000);
+});

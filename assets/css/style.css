@@ -168,6 +168,10 @@ body {
   background: var(--smoky-black);
 }
 
+/* Justificar todo el texto de los párrafos */
+p {
+  text-align: justify;
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -858,7 +862,7 @@ main {
 .timeline-item-title {
   font-size: var(--fs-6);
   line-height: 1.3;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
 }
 
 .timeline-list span {
@@ -1758,7 +1762,7 @@ textarea.form-input::-webkit-resizer {
 
   .filter-item button {
     color: var(--light-gray);
-    font-size: var(--fs-5);
+    font-size: var(--fs-7);
     transition: var(--transition-1);
   }
 
@@ -2072,7 +2076,7 @@ textarea.form-input::-webkit-resizer {
 /* Asegura que el selector de idioma esté horizontal */
 .language-selector {
   display: flex;
-  gap: 8px;           /* Espacio entre banderas */
+  gap: 8px; /* Espacio entre banderas */
   align-items: center;
 }
 
@@ -2083,4 +2087,147 @@ textarea.form-input::-webkit-resizer {
 
 .language-selector .language-link img:hover {
   transform: scale(1.1);
+}
+/* Contenedor relativo (si no lo tienes ya) */
+.avatar-box {
+  position: relative;
+  display: inline-block;
+}
+
+/* Burbuja de diálogo */
+.speech-bubble {
+  position: absolute;
+  top: -11px; /* ajustar según el tamaño del avatar */
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: var(--text-gradient-yellow); /* color oscuro profesional */
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.25);
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0.98;
+  transition: transform 180ms ease, opacity 180ms ease;
+  user-select: none;
+  z-index: 10;
+
+  /* Animación flotante */
+  animation: floatBubble 1.5s ease-in-out infinite;
+}
+
+/* Ocultar el speech bubble en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .speech-bubble {
+    display: none !important;
+  }
+}
+
+/* Keyframes de subir/bajar */
+@keyframes floatBubble {
+  0% {
+    transform: translateX(-50%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-110%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100%);
+  }
+}
+
+/* Flecha de la burbuja */
+.speech-bubble .bubble-arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -5px; /* coloca la flecha justo debajo de la burbuja */
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+  box-shadow: inherit;
+  border-bottom-left-radius: 2px;
+  z-index: -1;
+}
+
+/* Pequeña animación al aparecer */
+.speech-bubble.show {
+  transform: translateX(-50%) translateY(-120%);
+  opacity: 1;
+}
+
+/* Estado hover / focus para accesibilidad */
+.speech-bubble:focus,
+.speech-bubble:hover {
+  transform: translateX(-50%) translateY(-132%);
+  opacity: 1;
+  outline: none;
+}
+
+/* Variante compacta (si el avatar es muy pequeño) */
+.avatar-box.small .speech-bubble {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 14px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column; /* título arriba, rol abajo */
+  gap: 4px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column; /* ubicación arriba, fecha abajo */
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.timeline-role {
+  font-weight: 600;
+  color: var(--orange-yellow-crayola);
+}
+
+.timeline-location,
+.timeline-date {
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+}
+
+.timeline-text {
+  position: relative;
+  padding-left: 25px; /* espacio para el punto */
+  margin-top: 6px;
+}
+
+.timeline-text::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 9px; /* ajusta para alinear verticalmente */
+  width: 7px; /* tamaño del punto */
+  height: 7px;
+  background-color: var(
+    --orange-yellow-crayola
+  ); /* mismo color que tus puntos */
+  border-radius: 50%; /* círculo */
+}
+
+.timeline-text-p {
+  position: relative;
+  top: -20px;
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
 }
