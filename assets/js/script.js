@@ -3,10 +3,30 @@ $(function () {
    *  Cambio de imágenes al hacer click
    ====================== */
   const imagenes = [
-    "./assets/images/my-avatar.png",
-    "./assets/images/avatar2.png",
-    "./assets/images/avatar3.png",
-    "./assets/images/avatar4.png",
+    "./assets/images/profile/1.png",
+    "./assets/images/profile/2.png",
+    "./assets/images/profile/3.png",
+    "./assets/images/profile/4.png",
+    "./assets/images/profile/5.png",
+    "./assets/images/profile/6.png",
+    "./assets/images/profile/7.png",
+    "./assets/images/profile/8.png",
+    "./assets/images/profile/9.png",
+    "./assets/images/profile/10.png",
+    "./assets/images/profile/11.png",
+    "./assets/images/profile/12.png",
+    "./assets/images/profile/13.png",
+    "./assets/images/profile/14.png",
+    "./assets/images/profile/15.png",
+    "./assets/images/profile/16.png",
+    "./assets/images/profile/17.png",
+    "./assets/images/profile/18.png",
+    "./assets/images/profile/19.png",
+    "./assets/images/profile/20.png",
+    "./assets/images/profile/21.png",
+    "./assets/images/profile/22.png",
+    "./assets/images/profile/23.png",
+    "./assets/images/profile/24.png",
   ];
   let index = 0;
 
